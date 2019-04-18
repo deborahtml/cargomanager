@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/Estilo.css" rel="stylesheet" type="text/css">
+<!-- 
+Para saber mais sobre os comentários condicionais sobre as tags html na parte superior do arquivo:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Se você estiver usando a compilação personalizada do modernizr (http://www.modernizr.com/), faça o seguinte:
+* insira o link para o seu js aqui
+* remova o link abaixo para o html5shiv
+* adicione a classe "no-js" às tags html na parte superior
+* você também pode remover o link para respond.min.js se tiver incluído o MQ Polyfill na sua compilação do modernizr 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/respond.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script src="js/meuscript.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cadastro de Veículo</title>
+</head>
+
+<body>
+	
+	<div class="menuIndex">
+      <div class="gridContainer clearfix">
+      <div id="LayoutDiv1">
+      
+     <form name="meu_form">
+           
+            <h1>Cadastro de Veículo<a class="voltar" href="index.html" style="text-align:center">
+            <img src="img/voltar.png"></img></a></h1>
+        
+            <p class="placa">
+                <label for="placa">Placa do Caminhão</label> <input type="text" id="placa"  required name="placa" />
+               
+            </p>
+
+        
+            <p class="renavam">
+                <label for="renavam">Número do Renavam</label> <input type="text" id="renavam" required name="renavam" />           
+            </p>
+             <p class="fabricacao">
+                <label for="fabricacao">Ano de Fabricação</label> <input type="text" id="fabricacao" required name="fabricacao" />           
+            </p>
+            <p class="anoCompra">
+                <label for="anoCompra">Ano de Compra do Veículo</label> <input type="text" id="anoCompra" required name="anoCompra" />           
+            </p>
+            <p class="cargaSuportada">
+                <label for="cargaSuportada">Carga Máxima Suportada</label> <input type="text" id="cargaSuportada" required name="cargaSuportada" />           
+            </p>
+            <p class="numeroEixo">
+                <label for="numeroEixo">Número de Eixos</label> <input type="text" id="numeroEixo" required name="numeroEixo" />           
+            </p>
+            <p class="cumprimento">
+                <label for="cumprimento">Cumprimento Total (em metros)</label> <input type="text" id="cumprimento" required name="cumprimento" />           
+            </p>
+            
+            
+
+
+            <p class="submit">
+                <input type="image" src="img/salvar.png" type="submit" onclick="Enviar();" value="Enviar" />
+            </p>
+     
+        </form>
+     
+     </div>
+    </div>
+    </div>
+
+</body>
+</html>

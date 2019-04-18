@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/Estilo.css" rel="stylesheet" type="text/css">
+<!-- 
+Para saber mais sobre os comentários condicionais sobre as tags html na parte superior do arquivo:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Se você estiver usando a compilação personalizada do modernizr (http://www.modernizr.com/), faça o seguinte:
+* insira o link para o seu js aqui
+* remova o link abaixo para o html5shiv
+* adicione a classe "no-js" às tags html na parte superior
+* você também pode remover o link para respond.min.js se tiver incluído o MQ Polyfill na sua compilação do modernizr 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/respond.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+<script src="js/meuscript.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript"> 
+jQuery.fn.toggleText = function(a,b) {
+return   this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
+}
+
+$(document).ready(function(){
+$('.tgl').before('<span>Agendamentos Cadastrados Clique Aqui</span>');
+$('.tgl').css('display', 'none')
+$('span', '#box-toggle').click(function() {
+$(this).next().slideToggle('slow')
+.siblings('.tgl:visible').slideToggle('fast');
+// aqui começa o funcionamento do plugin
+$(this).toggleText('Revelar','Esconder')
+.siblings('span').next('.tgl:visible').prev()
+.toggleText('Revelar','Esconder')
+});
+})
+</script>
+<title>Listagem de Agendamentos</title>
+</head>
+
+<body>
+	<div class="menuIndex">
+      <div class="gridContainer clearfix">
+      <div id="LayoutDiv1">
+      
+     <form name="meu_form">
+           
+            <h1>Listagem <a class="voltar" href="index.html" style="text-align:center">
+            <img src="img/voltar.png"></img></a></h1><br />
+            
+                <p class="selecao">Seleção de Motorista
+                  <select class="basic">
+                    <option value="" ></option>
+                    <option value="" >Carlos Maia</option>
+                    <option value="" selected="selected" >Andre Luiz</option>
+                    <option value="" >Maria Luiza</option>
+                     <option value="" >Débora Duarte</option>
+                    <option value="" >José Agustino</option>
+                    <option value="" >Emanuel Duarte</option>
+                  </select>
+                </p>
+                <p class="selecao">Seleção de Veículo
+                  <select class="basic">
+                    <option value="" ></option>
+                    <option value="" >Gol</option>
+                    <option value="" selected="selected" >Corola</option>
+                    <option value="" >Fiat</option>
+                  </select>
+                </p>
+                <p class="selecao">Data de Entrada no Recinto
+				<input type="date" id="bday" name="diaa">
+                </p>
+                <p class="selecao">Data de Saída do Recinto
+                 <input type="date" id="bday2" name="diaaa">
+                </p>
+               <p class="selecao">Tipo de Operação Executada
+                  <select class="basic">
+                    <option value="" ></option>
+                    <option value="usa" >Carga</option>
+                    <option value="ca" selected="selected" >Descarga</option>
+                  </select>
+                </p><br />
+                
+                
+                
+                
+           		<div id="box-toggle">
+    
+                    <div class="tgl">
+                       <h2>Agendados</h2>
+                       <p>Luiz Carlos<br /> Data: 23/04/2019  </p><br /> <br /> 
+                       <p>Maria Clara<br /> Data: 10/05/2019  </p><br /> <br />
+                       <p>Moises Alencar<br /> Data: 12/05/2019  </p><br /> <br />
+                       <p>Ana Carla<br /> Data: 15/05/2019  </p><br /> <br />
+                       <p>Débora Daurte<br /> Data: 17/05/2019  </p><br /> <br />
+                       <p>Carlos Alberto<br /> Data: 22/05/2019  </p><br /> <br />
+                    </div>
+                
+                </div><br />
+
+
+            <p class="submit">
+                <input type="image" src="img/salvar.png" type="submit" onclick="Enviar();" value="Enviar" />
+            </p>
+     
+        </form>
+     
+     </div>
+    </div>
+    </div>
+
+</body>
+</html>
